@@ -1,0 +1,7 @@
+@startuml Ejercicio1
+class teclado {}
+class tecla {} 
+teclado "1" --o "105..*" tecla : tiene
+
+
+@enduml
