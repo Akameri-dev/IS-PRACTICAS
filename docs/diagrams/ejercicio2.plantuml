@@ -1,0 +1,11 @@
+@startuml Ejercicio2
+    class persona {}
+    class estudiante {}
+    class profesor {}
+    class empleado {}
+
+    persona <|-- profesor
+    persona <|-- empleado
+    persona <|-- estudiante
+
+@enduml

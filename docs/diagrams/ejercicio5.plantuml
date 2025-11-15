@@ -1,0 +1,11 @@
+@startuml Ejercicio5
+
+class equipobaseball
+class jugador
+class estadio
+
+equipobaseball "1" o-- "1..*" jugador
+equipobaseball "1" -- "0..1" estadio : "homeclub"
+
+
+@enduml

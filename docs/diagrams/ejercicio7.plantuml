@@ -1,0 +1,11 @@
+@startuml Ejercicio7
+
+    class caracterizacion
+    class criterio
+    class elementoclasificado
+
+
+    caracterizacion "1" -- "1...*" criterio: "se fundamenta"
+    elementoclasificado "0..*" ..> "1" caracterizacion : "se genera de"
+
+@enduml

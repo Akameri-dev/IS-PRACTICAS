@@ -1,0 +1,11 @@
+@startuml Ejercicio3
+
+    class discoduro 
+    class pista 
+    class sectores
+
+    pista *-- sectores
+    discoduro *-- pista
+
+
+@enduml

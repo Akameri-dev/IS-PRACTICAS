@@ -1,0 +1,10 @@
+@startuml Ejercicio4
+
+class poligono
+class lado
+class triangulo
+
+triangulo --|> poligono
+triangulo "1" *-- "3" lado: tiene
+
+@enduml

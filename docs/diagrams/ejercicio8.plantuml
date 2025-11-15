@@ -1,0 +1,22 @@
+@startuml Ejercicio8
+
+    class TEG
+    class TGM
+    class Profesor
+    abstract class TrabajoInvestigacion
+    abstract class Estudiante
+    class EstudiantePregrado
+    class EstudiantePostgrado
+
+    TEG --|> TrabajoInvestigacion
+    TGM --|> TrabajoInvestigacion
+    EstudiantePregrado --|> Estudiante
+    EstudiantePostgrado --|> Estudiante
+
+    TrabajoInvestigacion "0..*" -- "1..2" Profesor : "es tutorado por"
+    Profesor "1" -- "...*" TrabajoInvestigacion: dirige
+
+    TGM "1" -- "1" EstudiantePostgrado : "es realizado por"
+    TEG "1" -- "1..2" EstudiantePregrado : "es realizado por"
+
+@enduml
