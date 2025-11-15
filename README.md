@@ -1,1 +1,1 @@
-IS PRACTICAS (modificacion desde github)
+IS PRACTICAS (modificacion desde github.)
