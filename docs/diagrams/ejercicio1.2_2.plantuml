@@ -1,0 +1,26 @@
+@startuml Ejercicio 1.2
+
+object  "T1 : Poligono" as t1 #DarkCyan {
+}
+object  "T2 : Poligono" as t2 #DarkMagenta{
+}
+object ": Punto" as p1{
+    cord_x: 10
+    cord_y: 10
+}
+note left 
+    <font color= Red> un punto pertenece a uno o más polígonos </font>
+end note
+
+t1 o-- p1
+t2 o-- p1
+
+
+
+
+
+
+
+
+
+@enduml 

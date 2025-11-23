@@ -1,0 +1,41 @@
+@startuml Ejercicio 1.2
+
+object  "C1 : Poligono" as C1 #DarkMagenta {
+}
+
+object ": Punto" as p1{
+    cord_x: 1
+    cord_y: 0
+}
+
+object ": Punto" as p2{
+    cord_x: 1
+    cord_y: 1
+}
+
+object ": Punto" as p3{
+    cord_x: 0
+    cord_y: 0
+}
+
+object ": Punto" as p4{
+    cord_x: 0
+    cord_y: 1
+}
+
+C1 o-- p1
+C1 o-- p2
+C1 o-- p3
+C1 o-- p4
+
+
+
+
+
+
+
+
+
+
+
+@enduml 

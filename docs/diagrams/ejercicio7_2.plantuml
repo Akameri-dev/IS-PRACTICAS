@@ -1,0 +1,14 @@
+@startuml ejercicio 7
+
+object ":ClienteE1" as cli
+object "p : PruebaE1" as p
+
+cli -right-> p : 1: f()
+
+
+p -down-> p : 1.1: g() \n 1.1.1: h()
+
+
+
+
+@enduml

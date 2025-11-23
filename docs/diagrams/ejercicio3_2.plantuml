@@ -1,0 +1,19 @@
+@startuml Ejercicio 3
+
+Sistema -> miLista: Solicita el Item
+Sistema <- miLista: Devuelve el Item solicitado
+Sistema --> Item: Haz algo
+
+Sistema2 -> miColeccion: Dame el estudiante i
+Sistema2 <- miColeccion: Devuelve el estudiante i
+Sistema2 -> Estudiante: Dime tu nombre
+
+Sistema3 -> textField: Dame el texto
+Sistema3 <- textField: Envia el texto
+Sistema3 -> Lista: Agrega este texto
+
+
+
+
+
+@enduml

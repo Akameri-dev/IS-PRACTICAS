@@ -1,0 +1,16 @@
+@startuml Ejercicio 6
+
+object "MainWindow : JFrame" as main
+object ": DataStore" as store
+object "ListeningPort : Socket" as port
+
+
+main -right-> store : 1: loadAppSettings()
+
+
+main -down-> port : 2: crear \n 3: listen() \n 4: accept()
+
+@enduml
+
+
+@endumdl

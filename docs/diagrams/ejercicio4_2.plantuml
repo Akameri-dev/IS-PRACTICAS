@@ -1,0 +1,26 @@
+@startuml Ejercicio 4
+
+participant "ClienteE1" as cliente
+participant "p : PruebaE1" as prueba
+
+create prueba
+cliente -> prueba : crea
+
+cliente -> prueba : f()
+activate prueba
+
+
+    prueba -> prueba : g()
+    activate prueba #DarkSalmon
+    
+
+        prueba -> prueba : h()
+        activate prueba #IndianRed
+        deactivate prueba
+        
+
+    deactivate prueba
+
+return
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml ejercicio 9
+
+object ": Registro" as reg
+object "catalogo : CatalogoProductos" as cat
+object "venta : Venta" as venta
+object "lineasVenta : List" as lista
+
+object "Actor" as act
+act -> reg : 1: introducirArticulo(id, cant)
+
+reg -down-> cat : 1.1: espec = getEspecificacion(id)
+
+reg -right-> venta : 1.2: crearLineaVenta(espec, cant)
+
+' Nota: Asumimos que "new LineaVenta" ocurre justo aquí
+venta -down-> lista : 1.2.1: añadir(new LineaVenta(...))
+
+@enduml

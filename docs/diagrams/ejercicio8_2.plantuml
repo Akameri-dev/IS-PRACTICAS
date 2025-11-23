@@ -1,0 +1,18 @@
+@startuml Ejercicio 8
+
+object ": Sistema" as sys
+object "c : Compra" as compra
+object "f : FuenteFecha" as fuente
+object "l : Lista" as lista
+
+sys -down-> compra : 1: <<create>>
+
+sys -down-> compra : 2: setCosto(x)
+
+sys -right-> fuente : 3: getFecha()
+
+sys -down-> compra : 4: setFecha(fecha)
+
+sys -left-> lista : 5: add(c)
+
+@enduml

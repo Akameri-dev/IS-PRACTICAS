@@ -1,0 +1,21 @@
+@startuml ejercico 10
+
+[*] --> Detenido
+
+state Detenido
+state Retrocediendo
+
+state Avanzando {
+    [*] --> Primera
+    Primera --> Segunda : acelerar
+    Segunda --> Tercera : acelerar
+    Tercera --> Segunda : frenar
+    Segunda --> Primera : frenar
+}
+
+Detenido --> Avanzando : iniciar marcha
+Avanzando --> Detenido : frenar total
+Detenido --> Retrocediendo : reversa
+Retrocediendo --> Detenido : frenar
+
+@enduml

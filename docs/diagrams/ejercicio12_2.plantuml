@@ -1,0 +1,17 @@
+@startuml Ejercicio 12
+
+[*] --> Colocado : Cliente encarga producto
+
+state Colocado
+
+Colocado --> PagadoPorAdelantado : Pago validado y cobrado
+
+state PagadoPorAdelantado
+
+PagadoPorAdelantado --> Realizado : Producto obtenido y enviado
+
+state Realizado
+
+Realizado --> [*] : Cliente añadido y recibo enviado
+
+@enduml

@@ -1,0 +1,29 @@
+@startuml Ejercicio 11
+
+start
+:Arrancar motor;
+
+if (¿Hacia dónde ir?) then (Adelante)
+  partition "Estado: Avanzando" {
+    :Meter Primera;
+    :Acelerar;
+    if (¿Necesita más velocidad?) then (Sí)
+        :Meter Segunda;
+        :Acelerar más;
+        if (¿Máxima velocidad?) then (Sí)
+            :Meter Tercera;
+        else (No)
+        endif
+    else (No)
+    endif
+  }
+else (Atrás)
+  :Meter Reversa;
+  :Retroceder;
+endif
+
+:Frenar;
+:Detener vehículo;
+stop
+
+@enduml

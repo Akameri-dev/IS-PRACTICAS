@@ -1,0 +1,40 @@
+@startuml Wheat
+
+@enduml
+
+/'
+>¿Qué significa que el paquete “top” tanga una dependencia con el paquete “controllers”?
+R:Significa que el código que está dentro de la carpeta top necesita usar clases,
+funciones o variables que están dentro de la carpeta controllers para funcionar.
+
+>¿Con cuántos paquetes tiene dependencias el paquete “Threads”? ¿Cuántas dependencias 
+son de entrada y cuántas de salida? ¿Si se hace un cambio en alguna de las clases del 
+paquete “Threads” qué podría suceder?
+R:
+Mira las flechas que nacen en Threads y apuntan a otros.
+Solo hay 1: Apunta hacia utils.
+Mira las puntas de flecha que tocan a Threads.
+Hay 5: Vienen desde top, controllers, Visualizers, samplers y utils
+Como tienes 5 paquetes que dependen de él (entrada), 
+si cambias algo en Threads, corres un riesgo altísimo de romper todo el sistema. 
+Tendrías que revisar y posiblemente arreglar el código en top, controllers, Visualizers, samplers y utils.
+
+>Hablando en términos de modularidad, ¿este diagrama muestra un código con bajo o alto 
+acoplamiento entre los paquetes? ¿Esto es bueno o malo?
+R:Este diagrama muestra un código con ALTO Acoplamiento (High Coupling).
+¿Por qué?
+
+Hay demasiadas flechas cruzadas (parece un plato de espagueti).
+
+Casi todos dependen de todos.
+
+Existe un Ciclo de Dependencia: Threads depende de utils y utils depende de Threads.
+Es MALO.
+
+Un alto acoplamiento hace que el software sea:
+
+Difícil de mantener (tocas una cosa y rompes tres).
+
+Difícil de probar (no puedes probar Threads aislado porque necesitas utils, y viceversa).
+
+Difícil de reutilizar.'/ 

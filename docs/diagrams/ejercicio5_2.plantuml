@@ -1,0 +1,30 @@
+@startuml Ejercicio 5
+
+participant "ClienteE2" as cliente
+participant "<<static>> \n PruebaE2" as clase
+participant "p : PruebaE2" as objeto
+
+cliente -> clase : f()
+activate clase
+
+    create objeto
+    clase -> objeto : crea
+
+    clase -> objeto : g()
+    activate objeto
+
+        objeto -> objeto : h()
+        activate objeto #DarkSalmon
+        
+        deactivate objeto
+
+    return
+return
+
+@enduml
+
+
+
+
+
+@enduml
